@@ -1,6 +1,6 @@
 ### Introduce
 
-博客项目，使用hexo，页面部署岛shuwo.github.io。
+博客项目，使用hexo，页面部署到shuwo.github.io。
 
 ### Install
 
