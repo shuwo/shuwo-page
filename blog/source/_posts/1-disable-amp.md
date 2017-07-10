@@ -1,5 +1,6 @@
 ---
 title: 我决定在我的网站上禁用AMP[译文]
+date: 2017-06-30
 ---
 
 原文：[https://www.alexkras.com/i-decided-to-disable-amp-on-my-site](https://www.alexkras.com/i-decided-to-disable-amp-on-my-site)
