@@ -214,7 +214,7 @@ describe('测试组件detail.vue不涉及store的methods', () => {
 })
 ```
 
-![error](../images/error.png)
+![error](https://shuwo.github.io/images/error.png)
 
 2.如果组件应用到store进行状态管理，则需要引入store文件，可在创建测试组件实例构造器Vue.extend时传入store，才能在测试实例中使用。在测试detail组件中，打开不同模块的详情都需要调用store里的 showDetail mutation，并传入不同的参数。为了能在测试不同详情信息的输入结果是否达到预期，我一般都选择在每个describe块的before钩子函数进行commint。
 ```javascript
@@ -256,11 +256,11 @@ Mock.mock("/hawkeye/va/video/programMonitor/processall",function(res){
 ```
 
 4.测试结果查看：测试结果主要在终端查看，可以看到相关的断言是否正确。如配置了coverage插件，则会在相应的目录下生产coverage文件夹，具体的目录结果如下：打开index.html文件即可查看到代码的覆盖率等相关信息。
-![coverage](../images/success.png)
-![coverage](../images/file.png)
+![coverage](https://shuwo.github.io/images/success.png)
+![coverage](https://shuwo.github.io/images/file.png)
 但是我发现打开的index文件这里的detail.spec.js，默认是编译之后的文件，所以，测试覆盖率就是打包编译后的覆盖率，这并不是我想要的。
-![coverage](../images/coverage1.png)
-![coverage](../images/coverage2.png)
+![coverage](https://shuwo.github.io/images/coverage1.png)
+![coverage](https://shuwo.github.io/images/coverage2.png)
 经过网上的查找之后，发现需要另外另外安装两个模块：sourcemap 与 isparta,去掉karma.comfig.js里面的preprocessors中的coverage设置，同时需要修改vue的js loader。
 sourcemap 是资源定位的模块
 isparta 计算测试覆盖率
@@ -288,11 +288,11 @@ isparta: {
 },
 ```
 再运行测试命令，这时打开index.html，显示如下：
-![coverage](../images/coverage3.png)
-![coverage](../images/coverage4.png)
+![coverage](https://shuwo.github.io/images/coverage3.png)
+![coverage](https://shuwo.github.io/images/coverage4.png)
 detail.vue即是要测试的组件，该文件中代码部分按照“绿色”，“黄色”和“红色”进行分类。“绿色”表示没有静态错误的代码；“黄色”表示可能存在错误的代码，需要重新测试；“红色”表示肯定没有测试到的代码。这样，我可以集中精力编写“红色”代码测试，重点测试“黄色”代码。
-![coverage](../images/code_yellow.png)
-![coverage](../images/code_red.png)
+![coverage](https://shuwo.github.io/images/code_yellow.png)
+![coverage](https://shuwo.github.io/images/code_red.png)
 5.在编写测试代码过程，可以直接参考了ElementUi组件库测试的一个工具函数做了简单的修改，在test文件夹新建了一个util.js的文件来存放几个工具函数，辅助生成测试组件实例。如：
 ```javascript
 /**
